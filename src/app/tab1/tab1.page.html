@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Peliculas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <app-peliculas [peliculas]="peliculas"></app-peliculas>
+
+    <ion-infinite-scroll threshold="150px"  position="bottom" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando noticias...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

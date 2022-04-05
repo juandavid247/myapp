@@ -1,0 +1,25 @@
+<ion-card >
+  <ion-card-header>
+    <ion-card-subtitle>
+      <span >
+        {{ indice+1 }}. 
+      </span>
+      <span>{{ pelicula.original_title }}</span>
+      <div class="noticiasMore">
+        <ion-button (click)="lanzarMenu()" fill="clear">
+            <ion-icon slot="icon-only" name="ellipsis-vertical-circle-outline"
+            class="text-primary"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card-subtitle>
+    <ion-card-title >
+      {{ pelicula.title }}
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <img  [src]="pelicula.backdrop_path  | imagen">
+    <p>
+      {{ pelicula.overview }}
+    </p>
+  </ion-card-content>
+</ion-card>
